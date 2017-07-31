@@ -1,14 +1,21 @@
 function aritGeo(array) {
 
+    var j, k = 0;
+
     for (i = 0; i < array.length; i++) {
         if ((array[i] - array[i + 1]) == (array[i + 1] - array[i + 2])) {
-            console.log("Arthmetic")
+            j++
         } else if ((array[i] / array[i + 1]) == (array[i + 1] / array[i + 2])) {
-            console.log("Geometric")
+            k++
         } else if (array == []) {
             console.log("0")
         } else { console.log("-1") }
 
+    }
+    if (j == array.length) {
+        console.log("Arithmetic")
+    } else if (k == array.length) {
+        console.log("Geometric")
     }
 
 }
